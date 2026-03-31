@@ -28,8 +28,8 @@ public class SeleniumTest {
         Thread.sleep(2000); // Not a good mechanism, better to use is soft sleep? implicit wait / explicit wait
         driver.findElement(By.xpath("//*[@id=\"menu\"]/a[2]/li")).click(); //Clicking sign in button
 
-        //Entering user name and password
-        driver.findElement(By.xpath("//*[@id=\"usr\"]")).sendKeys("user"); //User name area
+        //Entering username and password
+        driver.findElement(By.xpath("//*[@id=\"usr\"]")).sendKeys("user"); //Username area
         driver.findElement(By.xpath("//*[@id=\"pwd\"]")).sendKeys("password"); //Password area
 
         driver.findElement(By.xpath("//*[@id=\"second_form\"]/input")).click();
@@ -39,7 +39,7 @@ public class SeleniumTest {
         String actualFirstCategory = webElement.getText();
 
         String expectedFirstCategory = "Formal Shoes";
-        Assert.assertEquals(expectedFirstCategory, actualFirstCategory);
+        Assert.assertEquals(actualFirstCategory, expectedFirstCategory);
 
         driver.close();
 
