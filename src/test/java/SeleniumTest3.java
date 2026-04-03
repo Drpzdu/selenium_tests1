@@ -24,8 +24,7 @@ public class SeleniumTest3 {
     String password = "SecretPassword123@";
 
     @BeforeMethod
-    public void DriverSetup()
-    {
+    public void DriverSetup() {
         options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/resources/chromedriver.exe");
@@ -34,8 +33,7 @@ public class SeleniumTest3 {
     }
 
     @Test(priority = 1)
-    public void ValidateSignUp()
-    {
+    public void ValidateSignUp() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         driver.findElement(By.id("signup")).click();
@@ -48,8 +46,7 @@ public class SeleniumTest3 {
     }
 
     @Test(priority = 2)
-    public void ValidateLogin()
-    {
+    public void ValidateLogin() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         driver.findElement(By.id("email")).sendKeys(email);
@@ -58,8 +55,7 @@ public class SeleniumTest3 {
     }
 
     @AfterMethod
-    public void DriverQuit()
-    {
+    public void Teardown() {
         driver.quit();
     }
 
