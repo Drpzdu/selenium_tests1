@@ -1,0 +1,17 @@
+  image: docker:latest
+
+  stages:
+    - test
+
+  test-job:
+    stage: test
+    services:
+      - docker:dind
+    script:
+      - docker compose up --detach --wait hub chrome-node
+      - docker compose run tests mvn clean verify
+    artifacts:
+      paths:
+      - target/surefire-reports/**
+      when: always
+      expire_in: 30 days
