@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeTesting">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/michal/IdeaProjects/selenium_tests1/src/test/java/com/seleniumtest/allure">
+        <classes>
+            <class name="com.seleniumtest.allure.TestCase1">
+                <methods>
+                    <include name="testMethod1"/>
+                </methods>
+            </class>
+            <class name="com.seleniumtest.allure.TestCase2">
+                <methods>
+                    <include name="testMethod2"/>
+                </methods>
+            </class>
+            <class name="com.seleniumtest.allure.TestCase3">
+                <methods>
+                    <include name="testMethod3"/>
+                    <include name="testMethod4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
