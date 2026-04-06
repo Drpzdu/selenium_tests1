@@ -40,6 +40,14 @@
             <version>31.1-jre</version>
         </dependency>
 
+        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>3.141.59</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <properties>
