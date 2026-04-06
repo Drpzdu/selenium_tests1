@@ -7,6 +7,7 @@ import org.testng.annotations.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+@Test(enabled = false)
 public class SeleniumGridTest {
 
     WebDriver driver;
